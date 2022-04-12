@@ -1,0 +1,12 @@
+<div class="all-items-container"
+     infinite-scroll
+     [infiniteScrollDistance]="scrollDistance"
+     [scrollWindow]="false"
+     (scrolled)="onScrollDown()">
+  <app-single-item *ngFor="let item of showingItems" [itemData]="item"></app-single-item>
+    <div *ngIf="noMoreResults">
+      <p> You did it, you found <b> infinity! </b> </p>
+      <p>But Seriously now, That's it.. there is no more results..</p>
+    </div>
+</div>
+
