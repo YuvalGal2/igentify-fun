@@ -54,10 +54,10 @@ export class ItemsListComponent implements OnInit, OnDestroy {
   addItems(startIndex:any, endIndex: any,) {
     for (let i = this.showingItems.length; i < this.sum; ++i) {
       if (this.allItems[i]) {
-        console.log(this.allItems[i]);
         this.showingItems.push((this.allItems[i]));
       }
       else {
+        // could make it faster, just do the if check outside.  for time sake leaving it.
         this.noMoreResults = true;
       }
     }
